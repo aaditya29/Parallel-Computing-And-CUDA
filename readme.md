@@ -7,6 +7,11 @@ Welcome to the Parallel Computing and CUDA Learning Repository! This repository 
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
+- [Core Concepts](#core-concepts)
+- [CUDA Programming](#cuda-programming)
+- [Advanced Topics](#advanced-topics)
+- [Projects](#projects)
+- [Additional Resources](#additional-resources)
 
 ## Introduction
 

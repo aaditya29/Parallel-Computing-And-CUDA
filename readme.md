@@ -44,3 +44,73 @@ To get started with this repository:
 
 3. **Explore the tutorials and examples**:
    - Navigate through the directories and start with the basic tutorials to get a grasp of fundamental concepts.
+
+## Core Concepts
+
+This section covers fundamental concepts in parallel computing:
+
+- Parallel vs. Sequential Computing
+
+- Amdahl's Law and Gustafson's Law
+
+- Types of Parallelism (Data, Task, Pipeline)
+
+- Parallel Architectures (SIMD, MIMD)
+
+- Synchronization and Communication
+
+## CUDA Programming
+
+Learn the basics of CUDA programming:
+
+- CUDA Programming Model
+
+- Thread Hierarchy (Grid, Block, Thread)
+
+- Memory Hierarchy (Global, Shared, Local, Constant)
+
+- Kernel Functions
+
+- Device Management
+
+- Error Handling
+
+## Advanced Topics
+
+Explore more advanced concepts in CUDA:
+
+- Stream Processing
+
+- Dynamic Parallelism
+
+- Unified Memory
+
+- Multi-GPU Programming
+
+- CUDA Libraries (cuBLAS, cuDNN, Thrust)
+
+- Performance Optimization Techniques
+
+## Projects
+
+## Additional Resources
+
+- [NVIDIA CUDA Documentation](https://docs.nvidia.com/cuda/)
+
+- [Parallel Computing: Theory and Practice](https://www.cs.cmu.edu/~guyb/paralg/)
+
+- [CUDA by Example: An Introduction to General-Purpose GPU Programming](https://developer.nvidia.com/cuda-example)
+
+- [Introduction to Parallel Programming in Open MP](https://www.youtube.com/playlist?list=PLp6ek2hDcoNBAyEJmxsOowMYNTKsUmTZ8)
+
+- [Parallel C++](https://youtube.com/playlist?list=PLxNPSjHT5qvsGKsAhirvZn7W73pXhXpfv)
+
+- [Practical Parallelism in C++](https://www.youtube.com/playlist?list=PLxNPSjHT5qvugVNYwtQwnvSQyvlbzAML3)
+
+- [Introduction to Parallel Programming with CUDA](https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/)
+
+- [CUDA Crash Course](https://www.youtube.com/playlist?list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU)
+
+- **Jeremy Howard Lectures**
+
+- **Programming Massively Parallel Processors: A Hands-on Approach Book**

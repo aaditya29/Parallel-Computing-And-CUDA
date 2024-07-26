@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": ".",
-      "program": "build/Debug/outDebug"
+      "cwd": "/Users/adityamishra/Documents/Parallel Computing and CUDA/1-Paralleism-In-CPP/1-Introduction",
+      "program": "/Users/adityamishra/Documents/Parallel Computing and CUDA/1-Paralleism-In-CPP/1-Introduction/build/Debug/outDebug"
     }
   ]
 }

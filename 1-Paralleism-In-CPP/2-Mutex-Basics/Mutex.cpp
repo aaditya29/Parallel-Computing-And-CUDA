@@ -23,5 +23,14 @@ int main(){
         t[i] = thread(call_from, i);
     }
 
-    
+    //Printing from the main function
+    mtx.lock();
+    cout<<"Launched from main: "<<endl;
+    mtx.unlock();
+
+    //Waiting for all threads to complete
+    for(int i = 0; i<10; i++){
+        t[i].join();// added join for execution in order
+    }
+
 }

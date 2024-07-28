@@ -32,3 +32,69 @@ In multithreaded programs, different threads might need to access and modify sha
 ### Using Mutex in C++
 
 The C++ Standard Library provides the `<mutex>` header, which includes various mutex types and functions for thread synchronization.
+
+#### Example: Basic Mutex Usage
+
+Here's a simple example demonstrating how to use a `std::mutex` to protect a shared resource:
+
+```cpp
+#include <iostream>
+#include <thread>
+#include <mutex>
+
+std::mutex mtx; // Global mutex
+
+void print_thread_id(int id) {
+    mtx.lock(); // Acquire the lock
+    std::cout << "Thread " << id << " is accessing the shared resource.\n";
+    mtx.unlock(); // Release the lock
+}
+
+int main() {
+    std::thread threads[10];
+    for (int i = 0; i < 10; ++i) {
+        threads[i] = std::thread(print_thread_id, i);
+    }
+    for (auto& th : threads) {
+        th.join();
+    }
+    return 0;
+}
+```
+
+In this example:
+
+- A global `std::mutex` object `mtx` is used to synchronize access to the `std::cout` stream.
+- Each thread calls `print_thread_id`, which locks the mutex before printing and unlocks it afterward.
+
+#### Example: Using `std::lock_guard`
+
+A safer and more exception-safe way to manage locks is by using `std::lock_guard`:
+
+```cpp
+#include <iostream>
+#include <thread>
+#include <mutex>
+
+std::mutex mtx; // Global mutex
+
+void print_thread_id(int id) {
+    std::lock_guard<std::mutex> guard(mtx); // Acquire the lock and automatically release it when out of scope
+    std::cout << "Thread " << id << " is accessing the shared resource.\n";
+}
+
+int main() {
+    std::thread threads[10];
+    for (int i = 0; i < 10; ++i) {
+        threads[i] = std::thread(print_thread_id, i);
+    }
+    for (auto& th : threads) {
+        th.join();
+    }
+    return 0;
+}
+```
+
+In this example:
+
+- `std::lock_guard` is a RAII (Resource Acquisition Is Initialization) class that locks the mutex when it is created and automatically unlocks it when it goes out of scope, ensuring that the mutex is always properly released even if an exception occurs.

@@ -22,7 +22,7 @@ int main(){
     cout<<"Launched the threads from the main() "<<endl;
 
     for(int i = 0; i < 10; i++){
-        t[i].join();
+        t[i].join();//join  blocks the current thread until the execution of the thread is completed on which join() is called
     }
 
     return 0;

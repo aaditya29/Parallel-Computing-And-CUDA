@@ -52,6 +52,11 @@ int main(){
         pthread_create(&threads[i], NULL, boring_thread_function, (void*)&per_thread_args[i]);
     }
 
-    
+    //returning code for the thread
+    void *ret;
+    //Waiting for all threads to finish before exiting the program
+    for(int i = 0; i<NUM_THREADS; i++){
+        pthread_join(threads[i], &ret);
+    }
 }
 

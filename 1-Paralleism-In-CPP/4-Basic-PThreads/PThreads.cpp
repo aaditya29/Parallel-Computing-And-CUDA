@@ -29,5 +29,29 @@ void *boring_thread_function(void *args){
     pthread_mutex_unlock(&mtx);
 }
 
+int main(){
 
+    //Creating an array of 10 threads
+    pthread_t threads[NUM_THREADS];
+    Args per_thread_args[NUM_THREADS];
+
+    //Creating 10 threads
+    for(int i = 0; i<NUM_THREADS; i++){
+        per_thread_args[i].tid = i;
+        per_thread_args[i].data = i*i;
+
+        /*
+        Now we are launching the threads
+
+        Arguments:
+            1) Pointer to the pthread_t
+            2) Attributes for the thread(NULL means default)
+            3) Entry routine
+            4) Arguments
+        */
+        pthread_create(&threads[i], NULL, boring_thread_function, (void*)&per_thread_args[i]);
+    }
+
+    
+}
 
